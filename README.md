@@ -17,7 +17,10 @@ unzip -d . 10.1.1.zip && unzip master.zip
 cp -R zpanel-freebsd-master/* zpanelx-10.1.1/etc/build/  
 rm -R zpanel-freebsd-master master.zip 10.1.1.zip  
 cd zpanelx-10.1.1/etc/build/  
-./new-install-BSD.sh  
+./new-install-BSD.sh
+
+После установки всех приложений установим пароль для админа
+./usr/local/etc/zpanel/panel/bin/setzadmin --set PASSWORD
 
 Что делает скрипт?
 ===============
