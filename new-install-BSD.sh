@@ -416,7 +416,7 @@ _install() {
 		cd /usr/ports/www/apache22/
 		make BATCH=yes install clean
 #		# Install PHP
-		cd /usr/ports/lang/php53
+		cd /usr/ports/lang/php55
 		make WITH_APACHE=yes WITH_CLI=yes BATCH=yes install clean
 		cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
 		echo "date.timezone = ${PHPTIMEZONE}" >> /usr/local/etc/php.ini
@@ -426,7 +426,7 @@ _install() {
 		## VERIFIER php-pear  libdb4.7 zip webalizer
 		##=================================
 		## Install PHP-extensions
-		cd /usr/ports/lang/php53-extensions
+		cd /usr/ports/lang/php55-extensions
 		## TODO options install -DBATCH
 		make WITH_GD=yes WITH_MCRYPT=yes WITH_MBSTRING=yes WITH_MYSQL=yes WITH_PDO_MYSQL=yes WITH_XLS=yes WITH_XMLRPC=yes WITH_IMAP=yes WITH_CURL=yes WITH_ZIP=yes BATCH=yes install clean
 #
