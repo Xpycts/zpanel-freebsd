@@ -2,42 +2,35 @@ Zpanel-freebsd
 ===============
 Version 0.23
 
-This script install and configure all you need for ZpanelX
+Этот скрипт установит и сконфигурирует все необходимое для запуска ZpanelX
 
 
-Requirement:
+Требования:
 ==============
 *shell/bash  
 
- INSTALL
+Установка:
 =========
-mkdir -p /usr/local/src/zpanelx && cd /usr/local/src/  
-fetch http://sourceforge.net/projects/zpanelcp/files/releases/10.0.0/zpanelx-1_0_0.zip  
-fetch https://github.com/cbcercas/zpanel-freebsd/archive/master.zip  
-unzip -d zpanelx zpanelx-1_0_0.zip && unzip master.zip  
-cp -R zpanel-freebsd-master/* zpanelx/etc/build/  
-rm -R zpanel-freebsd-master master.zip zpanelx-1_0_0.zip  
-cd zpanelx/etc/build/  
-vi install-BSD.sh  
-and configure all variable as you need, then with root account  
-./install-BSD.sh  
+mkdir -p /tmp/zpanelx && cd /tmp/zpanelx/  
+fetch https://github.com/zpanel/zpanelx/archive/10.1.1.zip
+fetch https://github.com/Xpycts/zpanel-freebsd/archive/master.zip
+unzip -d . 10.1.1.zip && unzip master.zip  
+cp -R zpanel-freebsd-master/* zpanelx-10.1.1/etc/build/  
+rm -R zpanel-freebsd-master master.zip 10.1.1.zip  
+cd zpanelx-10.1.1/etc/build/  
+./new-install-BSD.sh  
 
- What it does?
+Что делает скрипт?
 ===============
-1- Update port tree  
-2- Install portupgrade  
-2- Upgrade all installed port  
-3- install all requirement for ZpanelX (apache, php, mysql, ...)  
-4- Install ZpanelX and configure all to work.  
+1- Обновляем дерево портов
+2- Устанавливаем утилиту portupgrade  
+2- Обновляем все установленные порты
+3- Устанавливаем все зависимости ZpanelX (apache, php, mysql, ...)  
+4- Устанавливаем ZpanelX и конфигурируем её для работы.  
 
- Advertissement:
+ Дополнения:
 =================
-This script install the minimum to have a working ZpanelX,  
-but it doesn't install any security (like fail2ban, postscreen, amavisd, clamav ...).   
+
+Данный скрипт устанавливает все минимальные требования для работы ZpanelX, но он не устанавливает приложения для обеспечения безопасности (fail2ban, postscreen, amavisd, clamav ...).   
 
 
-
-If you have any suggestion send me a mail
-
-If you like this script, please give me a beer
-@paypal cbcercas@gmail.com
