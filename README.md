@@ -3,6 +3,8 @@ Zpanel-freebsd
 
 Этот скрипт установит и сконфигурирует все необходимое для запуска ZpanelX
 
+Пост в поддержку
+http://blog.kogtev.com/configure-zpanel-on-freebsd-9-2/
 
 Требования:
 ==============
